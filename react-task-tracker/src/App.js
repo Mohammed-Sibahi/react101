@@ -56,7 +56,7 @@ const addTask = (task) => {
 
   return (
     <div className="container">
-      <Header onAdd = {() => setShowAddTask(!showAddTask)} />
+      <Header onAdd = {() => setShowAddTask(!showAddTask)} showAdd={showAddTask} />
       {showAddTask && <AddTask onAdd={addTask} />}
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
