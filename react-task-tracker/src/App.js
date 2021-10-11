@@ -9,7 +9,7 @@ function App() {
   // the function setTasks is to update the state
   const [tasks, setTasks] = useState([]);
 
-  useEffect (() => {
+  useEffect(() => {
       const getTasks = async () => {
         const tasksFromServer = await fetchTasks()
         setTasks(tasksFromServer)
@@ -22,7 +22,7 @@ function App() {
 // fetch Tasks
 const fetchTasks = async () => {
   const res = await fetch("http://localhost:5000/tasks");
-  const data = await res.json();
+  const data = await res.json()
   return data;
 };
 
