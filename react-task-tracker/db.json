@@ -16,7 +16,7 @@
       "id": 3,
       "text": "Shopping for Food",
       "day": "October 17th at 10 pm",
-      "reminder": true
+      "reminder": false
     }
   ]
 }
