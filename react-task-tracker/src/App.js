@@ -9,12 +9,13 @@ function App() {
   // the function setTasks is to update the state
   const [tasks, setTasks] = useState([]);
 
-  useEffect =
-    (() => {
-      
-    fetchTasks();
-    },
-    []);  // the dependency array here: if you have a value
+  useEffect (() => {
+      const getTasks = async () => {
+        const tasksFromServer = await fetchTasks()
+        setTasks(tasksFromServer)
+      }
+    getTasks();
+    }, [])  // the dependency array here: if you have a value
           // where you want this code to run if this value changes,
           // you'll pass it in the empty array here
 
